@@ -30,3 +30,5 @@ should be able to perform actions within fraction of seconds.
 14) Verify that after erasing numbers the calculation is taking into account the latest number.
 
 15) Verify the text written on calculator button visible and readable or not.
+
+Project link :- https://harsh2910.github.io/Tip-Calculator/
