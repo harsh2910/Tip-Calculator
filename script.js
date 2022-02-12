@@ -7,6 +7,18 @@ function calculateTip() {
         alert("Please enter a valid bill amount.");
         return;
     }
+    
+    else if ( service < 0 ) {
+        document.getElementById("tipVal").value=0;
+        alert("Please enter a valid tip percentage.");
+        return;
+    }
+    
+    else if ( people < 1 ) {
+        document.getElementById("peopleVal").value=1;
+        alert("Please enter a valid number of people.");
+        return;
+    }
     var tip = bill * (service / 100.0)/ people;
     var tota = (bill / people) + tip;
     document.getElementById("tip").innerHTML ="₹"+ tip.toFixed(2);
@@ -17,6 +29,12 @@ function decreaseTip() {
     if ( tip < 1 ) {
         document.getElementById("tipVal").value=0;
         alert("Please enter a valid tip percentage.");
+        return;
+    }
+    var people = document.getElementById("peopleVal").value;
+    if ( people < 1 ) {
+        document.getElementById("peopleVal").value=1;
+        alert("Please enter a valid number of people.");
         return;
     }
     tip = tip * 1 - 1;
@@ -31,6 +49,12 @@ function increaseTip() {
         alert("Please enter a valid tip percentage.");
         return;
     }
+    var people = document.getElementById("peopleVal").value;
+    if ( people < 1 ) {
+        document.getElementById("peopleVal").value=1;
+        alert("Please enter a valid number of people.");
+        return;
+    }
     tip = tip * 1 + 1;
     document.getElementById("tipVal").value = tip;
     calculateTip();
@@ -41,6 +65,12 @@ function decreasePeoples() {
     if ( people < 2 ) {
         document.getElementById("peopleVal").value=1;
         alert("Please enter a valid number of people.");
+        return;
+    }
+    var tip = document.getElementById("tipVal").value;
+    if ( tip < 0 ) {
+        document.getElementById("tipVal").value=0;
+        alert("Please enter a valid tip percentage.");
         return;
     }
     people = people * 1 - 1;
@@ -55,6 +85,12 @@ function increasePeoples() {
         alert("Please enter a valid number of people.");
         return;
     }
+    var tip = document.getElementById("tipVal").value;
+    if ( tip < 0 ) {
+        document.getElementById("tipVal").value=0;
+        alert("Please enter a valid tip percentage.");
+        return;
+    }
     people = people * 1 + 1;
     document.getElementById("peopleVal").value = people;
     calculateTip();
@@ -66,4 +102,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("tb2").addEventListener("click", increaseTip);
     document.getElementById("pb1").addEventListener("click", decreasePeoples);
     document.getElementById("pb2").addEventListener("click", increasePeoples);
+
+    document.getElementById("billVal").addEventListener("keyup", calculateTip);
+
+    document.getElementById("tipVal").addEventListener("keyup", calculateTip);
+    
+    document.getElementById("peopleVal").addEventListener("keyup", calculateTip);
 }); 
