@@ -1,4 +1,4 @@
-#Test cases for Tip Calculator:-
+# Test cases for Tip Calculator:-
 
 1) Checking whether the application is operable and stable on different browsers like Google Chrome, Mozilla Firefox, Safari, etc.
 
