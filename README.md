@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+Test cases for Tip Calculator:-
 
-You can use the [editor on GitHub](https://github.com/harsh2910/Tip-Calculator/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+1) Checking whether the application is operable and stable on different browsers like Google Chrome, Mozilla Firefox, Safari, etc.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+2) Checking whether the application is responsive and does not a take long response time. The user
+should be able to perform actions within fraction of seconds.
 
-### Markdown
+3) To validate whether the entered value of BILL more than or equal to ₹0.00. If not, a message should be displayed and the value gets reset to default i.e. ₹0.00
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+4) To validate whether the entered value of TIP % more than or equal to 0%. If not, a message should be displayed and the value gets reset to default i.e. 0%
 
-```markdown
-Syntax highlighted code block
+5) To validate whether the entered value of NUMBER OF PEOPLE more than or equal to 1. If not, a message should be displayed and the value gets reset to default i.e. 1
 
-# Header 1
-## Header 2
-### Header 3
+6) Check if the buttons are clickable or not.
 
-- Bulleted
-- List
+7) Check whether JavaScript is enabled or not.
 
-1. Numbered
-2. List
+8) Check whether the text is overflowing or not.
 
-**Bold** and _Italic_ and `Code` text
+9) Check whether the values get reset on reloading the page.
 
-[Link](url) and ![Image](src)
-```
+10) Verify that all the buttons are present and text written on them is readable.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+11) Verify the spacing between the two buttons, the buttons should not be too closely placed.
 
-### Jekyll Themes
+12) Check the division of a number by zero or any negative number.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/harsh2910/Tip-Calculator/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+13) Calculator should not allow characters. Exception:- “e” which represents exponential.
 
-### Support or Contact
+14) Verify that after erasing numbers the calculation is taking into account the latest number.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+15) Verify the text written on calculator button visible and readable or not.
